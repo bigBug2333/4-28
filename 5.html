@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 封装一个对数组元素进行冒泡排序的函数（从大到小）
+        // 假设数组arr = [1,9,3,7,5];
+        var arr = [1,9,3,7,5];
+        for (var i = 0; i < arr.length -1; i++) {
+            var isSoft = true;
+            for (var j = 0; j < arr.length - 1 -i; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    isSoft = false;
+                    var temp = arr[j + 1];
+                    arr[j + 1] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+            if (isSoft) {
+                break;
+            }
+        }
+        console.log(arr);
+        
+    </script>
+</body>
+</html>
